@@ -1,1 +1,1 @@
-# Examining evolutionary rate inference for viral sequences.
+# Evolutionary rate inference for viral sequences.
