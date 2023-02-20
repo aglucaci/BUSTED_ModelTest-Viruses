@@ -1,0 +1,13 @@
+name: BUSTED_ModelTest_Viruses
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+
+dependencies:
+  - biopython=1.78
+  - hyphy=2.5.47
+  - snakemake=7.22.0
+  - python=3.9
+  - jupyter=1.0
+  - jupyterlab_code_formatter=1.5.3
