@@ -1,0 +1,1273 @@
+{
+ "Evidence Ratios":{
+  },
+ "Site Log Likelihood":{
+   "unconstrained":    [
+[-5.415590582541668, -10.4068621728123, -9.992159424466491, -7.447822454926557, -4.576548100987611, -18.90138655857868, -6.313756400388007, -5.183743346340698, -5.844760292716262, -22.81520330030118, -7.680767310091222, -20.04729384596104, -5.452015793813585, -9.760339008608486, -17.06231641469358, -10.00914788866583, -12.03775322202923, -12.7410562375342, -4.034041316424423, -16.1913435230177, -15.77484204451945, -6.43442016387403, -5.740129347370838, -6.005791952471072, -6.194035787284978, -3.842356992796965, -22.82893931552749, -15.45476975643155, -8.48837465458166, -5.59030697906824, -8.265629202622884, -8.340210755550467, -10.30042402228698, -5.553058350123447, -5.553058350123447, -6.747141926690499, -5.955984667892732, -9.974191694173538, -6.683961246292057, -7.570899635163575, -3.842356992796965, -18.96745414275773, -10.74892707219586, -22.40609263937507, -13.19752230943399, -5.151717308936917, -5.011646546299389, -10.49820906827551, -8.676758490182188, -14.48648771055878, -7.736740256322951, -13.15030775362912, -5.011646546299389, -7.885892372396735, -6.672436772301448, -8.78412711785284, -7.498413785891478, -17.65081495543031, -6.38304245094581, -5.986735183669448, -9.627261368367293, -8.426863425120855, -8.822029550834149, -12.25336215631797, -8.736168380748735, -9.068534120015528, -3.842356992796965, -8.397003799706752, -8.131752392133096, -10.7495537780429, -9.98046558502814, -8.630350719518898, -17.265048234103, -3.842356992796965, -10.89527354193523, -5.639090740710754, -5.011646546299389, -6.619347953946312, -14.81155158344843, -5.452015793813585, -18.76866824993977, -10.98095045493115, -12.69120439747041, -10.15856204019098, -8.202736143054237, -5.553058350123447, -5.639090740710754, -20.5044455567618, -5.797386927143113, -5.931512009062492, -12.7427993676023, -8.745481192835255, -5.986735183669448, -9.073471801093756, -5.654544020992335, -10.98466328182765, -9.793029105434789, -5.639090740710754, -7.880331613417935, -14.51433932081187, -8.954622854013849, -17.7994549168104, -8.39075008371859, -7.650997110430374, -14.84575549920105, -3.842356992796965, -5.369418398354646, -5.844760292716262, -6.79798319869927, -11.77061683085727, -8.443209426487281, -30.82469816497045, -23.13656978673911, -7.838769897392615, -9.260390843831221, -13.99055401155121, -13.97629692917283, -4.576548100987611, -6.809758883577198, -9.92747357245562, -12.37952626099004, -5.657766963363307, -10.73947026219771, -6.881276461543965, -4.576548100987611, -11.36876057409056, -8.508190472335013, -8.31500830056844, -11.19497405445688, -7.897909868030237, -5.151717308936917, -8.656177503366694, -11.88789918829599, -5.985780412377817, -10.95355339057226, -5.986735183669448, -5.985780412377817, -10.01444385129309, -7.24198477028802, -7.58261144677658, -10.48798894272209, -7.756818466740212, -8.459595684442666, -10.2745272715939, -11.06504637223886, -6.760509719725363, -8.726993517221336, -7.038912266711283, -9.329355818895467, -12.33381841242722, -7.285317470409283, -17.92444887181569, -12.44348664676531, -5.415590582541668, -11.62981142754663, -10.53078328734816, -19.77241470542812, -7.429055173810718, -6.005791952471072, -9.833151844763192, -11.6442737701941, -3.842356992796965, -6.932069727139114, -13.39145200988329, -16.09768989283113, -5.097691972811727, -13.70956277189069, -5.654544020992335, -12.90791645389486, -17.67112595009352, -8.414861721133914, -12.55188256235554, -5.359285332697541, -9.662097121591644, -4.034041316424423, -10.21458068149334, -5.740129347370838, -16.42679106501431, -10.86142299395464] 
+    ]
+  },
+ "analysis":{
+   "authors":"Sergei L Kosakovsky Pond",
+   "citation":"*Gene-wide identification of episodic selection*, Mol Biol Evol. 32(5):1365-71, *Synonymous Site-to-Site Substitution Rate Variation Dramatically Inflates False Positive Rates of Selection Analyses: Ignore at Your Own Peril*, Mol Biol Evol. 37(8):2430-2439",
+   "contact":"spond@temple.edu",
+   "info":"BUSTED (branch-site unrestricted statistical test of episodic diversification) uses a random effects branch-site model fitted \njointly to all or a subset of tree branches in order to test for alignment-wide evidence of episodic diversifying selection. \nAssuming there is evidence of positive selection (i.e. there is an omega > 1),  BUSTED will also perform a quick evidence-ratio \nstyle analysis to explore which individual sites may have been subject to selection. v2.0 adds support for synonymous rate variation, \nand relaxes the test statistic to 0.5 (chi^2_0 + chi^2_2). Version 2.1 adds a grid search for the initial starting point.\nVersion 2.2 changes the grid search to LHC, and adds an initial search phase to use adaptive Nedler-Mead. Version 3.0 implements the option\nfor branch-site variation in synonymous substitution rates. Version 3.1 adds HMM auto-correlation option for SRV, and binds SRV distributions for multiple branch sets.\nVersion 4.0 adds support for multiple hits, ancestral state reconstruction saved to JSON, and profiling of branch-site level support for selection / multiple hits.\n",
+   "requirements":"in-frame codon alignment and a phylogenetic tree (optionally annotated with {})",
+   "version":"4.1"
+  },
+ "background":1,
+ "branch attributes":{
+   "0":{
+     "AF060014":{
+       "MG94xREV with separate rates for branch sets":0.003694100472282365,
+       "Nucleotide GTR":0.0037357721033812,
+       "original name":"AF060014",
+       "unconstrained":0.003695598278292361
+      },
+     "AF060015":{
+       "MG94xREV with separate rates for branch sets":0.005665320534571055,
+       "Nucleotide GTR":0.005635274082025795,
+       "original name":"AF060015",
+       "unconstrained":0.005659926611618842
+      },
+     "AF060016":{
+       "MG94xREV with separate rates for branch sets":0.003735137309088404,
+       "Nucleotide GTR":0.003746861871109836,
+       "original name":"AF060016",
+       "unconstrained":0.003734559713971034
+      },
+     "AF060017":{
+       "MG94xREV with separate rates for branch sets":0,
+       "Nucleotide GTR":0,
+       "original name":"AF060017",
+       "unconstrained":0
+      },
+     "AF060018":{
+       "MG94xREV with separate rates for branch sets":0.007737954892658522,
+       "Nucleotide GTR":0.007555310262495724,
+       "original name":"AF060018",
+       "unconstrained":0.007731420369067436
+      },
+     "AF060019":{
+       "MG94xREV with separate rates for branch sets":0.001838084027453287,
+       "Nucleotide GTR":0.001864873938204543,
+       "original name":"AF060019",
+       "unconstrained":0.001838597753699419
+      },
+     "AF060020":{
+       "MG94xREV with separate rates for branch sets":0.003721546126426516,
+       "Nucleotide GTR":0.003735767343537344,
+       "original name":"AF060020",
+       "unconstrained":0.003722196165902192
+      },
+     "AF060021":{
+       "MG94xREV with separate rates for branch sets":0.003700220540923625,
+       "Nucleotide GTR":0.003735619694763756,
+       "original name":"AF060021",
+       "unconstrained":0.003700946265437391
+      },
+     "AF060022":{
+       "MG94xREV with separate rates for branch sets":0,
+       "Nucleotide GTR":0,
+       "original name":"AF060022",
+       "unconstrained":0
+      },
+     "AF060023":{
+       "MG94xREV with separate rates for branch sets":0.003693477475166057,
+       "Nucleotide GTR":0.003728896458229435,
+       "original name":"AF060023",
+       "unconstrained":0.003693859428620282
+      },
+     "AF060024":{
+       "MG94xREV with separate rates for branch sets":0.01391122273644757,
+       "Nucleotide GTR":0.01338358970914224,
+       "original name":"AF060024",
+       "unconstrained":0.01390999566961384
+      },
+     "AF442622":{
+       "MG94xREV with separate rates for branch sets":0,
+       "Nucleotide GTR":0,
+       "original name":"AF442622",
+       "unconstrained":0
+      },
+     "AF442623":{
+       "MG94xREV with separate rates for branch sets":0,
+       "Nucleotide GTR":0,
+       "original name":"AF442623",
+       "unconstrained":0
+      },
+     "AJ009773":{
+       "MG94xREV with separate rates for branch sets":0.01430121251437362,
+       "Nucleotide GTR":0.0127063157528019,
+       "original name":"AJ009773",
+       "unconstrained":0.01427499010991868
+      },
+     "AJ009775":{
+       "MG94xREV with separate rates for branch sets":0.007402766492287207,
+       "Nucleotide GTR":0.008120303449816147,
+       "original name":"AJ009775",
+       "unconstrained":0.007407823178222331
+      },
+     "AJ131672":{
+       "MG94xREV with separate rates for branch sets":0,
+       "Nucleotide GTR":0,
+       "original name":"AJ131672",
+       "unconstrained":0
+      },
+     "AJ131673":{
+       "MG94xREV with separate rates for branch sets":0,
+       "Nucleotide GTR":0,
+       "original name":"AJ131673",
+       "unconstrained":0
+      },
+     "AJ251996":{
+       "MG94xREV with separate rates for branch sets":0.00375539331824438,
+       "Nucleotide GTR":0.003746969905388044,
+       "original name":"AJ251996",
+       "unconstrained":0.003756896715293662
+      },
+     "AJ251997":{
+       "MG94xREV with separate rates for branch sets":0.001870089123320824,
+       "Nucleotide GTR":0.001870017211762431,
+       "original name":"AJ251997",
+       "unconstrained":0.001868998088479383
+      },
+     "AJ269549":{
+       "MG94xREV with separate rates for branch sets":0,
+       "Nucleotide GTR":0,
+       "original name":"AJ269549",
+       "unconstrained":0
+      },
+     "AJ269550":{
+       "MG94xREV with separate rates for branch sets":0,
+       "Nucleotide GTR":0,
+       "original name":"AJ269550",
+       "unconstrained":0
+      },
+     "AJ269554":{
+       "MG94xREV with separate rates for branch sets":0.02333868393711697,
+       "Nucleotide GTR":0.02199748676833164,
+       "original name":"AJ269554",
+       "unconstrained":0.02333773231464951
+      },
+     "L41916":{
+       "MG94xREV with separate rates for branch sets":0.003747661978468675,
+       "Nucleotide GTR":0.002314618376739356,
+       "original name":"L41916",
+       "unconstrained":0.003745893150886445
+      },
+     "Node1":{
+       "MG94xREV with separate rates for branch sets":0.001849339521665877,
+       "Nucleotide GTR":0.001866938485016453,
+       "unconstrained":0.001849565325172172
+      },
+     "Node10":{
+       "MG94xREV with separate rates for branch sets":0.0152661460372937,
+       "Nucleotide GTR":0.01285743257051255,
+       "unconstrained":0.01529339248512581
+      },
+     "Node12":{
+       "MG94xREV with separate rates for branch sets":0,
+       "Nucleotide GTR":0.00142387625874899,
+       "unconstrained":0
+      },
+     "Node15":{
+       "MG94xREV with separate rates for branch sets":0.03619172861860442,
+       "Nucleotide GTR":0.03156773365612386,
+       "unconstrained":0.03618822000638071
+      },
+     "Node16":{
+       "MG94xREV with separate rates for branch sets":0.07382221456891201,
+       "Nucleotide GTR":0.05705726817827252,
+       "unconstrained":0.07380553740049037
+      },
+     "Node19":{
+       "MG94xREV with separate rates for branch sets":0.05436375887394313,
+       "Nucleotide GTR":0.03913914263800401,
+       "unconstrained":0.05441767495795395
+      },
+     "Node2":{
+       "MG94xREV with separate rates for branch sets":0.003281984959511529,
+       "Nucleotide GTR":0.003642769978103289,
+       "unconstrained":0.003282323683208886
+      },
+     "Node20":{
+       "MG94xREV with separate rates for branch sets":0.04359535247320983,
+       "Nucleotide GTR":0.03098205414282161,
+       "unconstrained":0.04359158877258916
+      },
+     "Node21":{
+       "MG94xREV with separate rates for branch sets":0.03336490911483563,
+       "Nucleotide GTR":0.035079907912184,
+       "unconstrained":0.03330414227044301
+      },
+     "Node24":{
+       "MG94xREV with separate rates for branch sets":0.09840630609209307,
+       "Nucleotide GTR":0.07258176018837423,
+       "unconstrained":0.09830023367816779
+      },
+     "Node27":{
+       "MG94xREV with separate rates for branch sets":0.1001747401395151,
+       "Nucleotide GTR":0.07437996715692374,
+       "unconstrained":0.1000959455656122
+      },
+     "Node3":{
+       "MG94xREV with separate rates for branch sets":0.01884351014721468,
+       "Nucleotide GTR":0.01669334761525864,
+       "unconstrained":0.0188445944400874
+      },
+     "Node31":{
+       "MG94xREV with separate rates for branch sets":0.001846304590397121,
+       "Nucleotide GTR":0.001868129099239622,
+       "unconstrained":0.001846516537835618
+      },
+     "Node37":{
+       "MG94xREV with separate rates for branch sets":0.001815854561245663,
+       "Nucleotide GTR":0.001862935330888562,
+       "unconstrained":0.001815898313672818
+      },
+     "Node4":{
+       "MG94xREV with separate rates for branch sets":0.001593093576891458,
+       "Nucleotide GTR":0.003269059743479351,
+       "unconstrained":0.001595357617408601
+      },
+     "Node40":{
+       "MG94xREV with separate rates for branch sets":0.007477007024255538,
+       "Nucleotide GTR":0.007495277786315746,
+       "unconstrained":0.007471769945755099
+      },
+     "Node6":{
+       "MG94xREV with separate rates for branch sets":0.006578482646104271,
+       "Nucleotide GTR":0.006691608814439923,
+       "unconstrained":0.006573610513486245
+      },
+     "Node9":{
+       "MG94xREV with separate rates for branch sets":0.001773456640186139,
+       "Nucleotide GTR":0.003357605575411382,
+       "unconstrained":0.001768989329861572
+      }
+    },
+   "attributes":{
+     "MG94xREV with separate rates for branch sets":{
+       "attribute type":"branch length",
+       "display order":1
+      },
+     "Nucleotide GTR":{
+       "attribute type":"branch length",
+       "display order":0
+      },
+     "original name":{
+       "attribute type":"node label",
+       "display order":0
+      },
+     "unconstrained":{
+       "attribute type":"branch length",
+       "display order":0
+      }
+    }
+  },
+ "data partitions":{
+   "0":{
+     "coverage":      [
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178] 
+      ],
+     "name":"busted.filter.default"
+    }
+  },
+ "fits":{
+   "MG94xREV with separate rates for branch sets":{
+     "AIC-c":3579.903985368861,
+     "Equilibrium frequencies":      [
+[0.0313116350882716],
+      [0.01843548843081442],
+      [0.02853357190004408],
+      [0.02695254152751954],
+      [0.02493357567441917],
+      [0.01468025047522243],
+      [0.0227213932528779],
+      [0.02146241267502678],
+      [0.01847455782927274],
+      [0.0108773462697112],
+      [0.01683543905187272],
+      [0.01590259613374668],
+      [0.02705404121120841],
+      [0.01592872624984147],
+      [0.02465372465891822],
+      [0.0232876746032802],
+      [0.01836752951730641],
+      [0.01081433074204993],
+      [0.01673790661620712],
+      [0.01581046791959368],
+      [0.01462613453052882],
+      [0.008611493240929424],
+      [0.01332845953493125],
+      [0.01258993652710348],
+      [0.01083724900637511],
+      [0.00638069452826878],
+      [0.009875735420725821],
+      [0.00932852605956064],
+      [0.01587000803721758],
+      [0.009343854089454599],
+      [0.01446197281322562],
+      [0.01366064242443198],
+      [0.02616853112510625],
+      [0.01540736060088434],
+      [0.02384677971213471],
+      [0.02252544205613208],
+      [0.02083810217054515],
+      [0.0122689406159153],
+      [0.01898928257395375],
+      [0.01793709630694715],
+      [0.01544001264114712],
+      [0.00909068381817324],
+      [0.01407012791225268],
+      [0.01329050944553901],
+      [0.02261026987251128],
+      [0.01331234754994977],
+      [0.02060421818496331],
+      [0.01946254917602655],
+      [0.01198491599468483],
+      [0.01752185450701976],
+      [0.01620932426208736],
+      [0.009543634788237635],
+      [0.01477118387396642],
+      [0.01395272026118441],
+      [0.007071365739878484],
+      [0.010944723462443],
+      [0.01033828203009721],
+      [0.017587839478726],
+      [0.01035526922560889],
+      [0.01602739304152908],
+      [0.0151393235323974] 
+      ],
+     "Log Likelihood":-1732.137506357749,
+     "Rate Distributions":{
+       "non-synonymous/synonymous rate ratio for *background*":        [
+[0.01707128625424359, 1] 
+        ],
+       "non-synonymous/synonymous rate ratio for *test*":        [
+[0.02502372439459412, 1] 
+        ]
+      },
+     "display order":1,
+     "estimated parameters":57
+    },
+   "Nucleotide GTR":{
+     "AIC-c":4097.823588328134,
+     "Equilibrium frequencies":      [
+[0.3022427333819123],
+      [0.2140717350821796],
+      [0.2437049631608776],
+      [0.2399805683750303] 
+      ],
+     "Log Likelihood":-1997.696166877296,
+     "Rate Distributions":{
+       "Substitution rate from nucleotide A to nucleotide C":0.08749276461603128,
+       "Substitution rate from nucleotide A to nucleotide G":1,
+       "Substitution rate from nucleotide A to nucleotide T":0.127049173776036,
+       "Substitution rate from nucleotide C to nucleotide G":0.03126316259206854,
+       "Substitution rate from nucleotide C to nucleotide T":1.485635378149556,
+       "Substitution rate from nucleotide G to nucleotide T":0.122342445542946
+      },
+     "display order":0,
+     "estimated parameters":51
+    },
+   "Unconstrained model":{
+     "AIC-c":3596.394380337113,
+     "Log Likelihood":-1732.13819239023,
+     "Rate Distributions":{
+       "Background":{
+         "0":{
+           "omega":0.01317215681718762,
+           "proportion":0.9638779996590564
+          },
+         "1":{
+           "omega":0.1193977061098785,
+           "proportion":0.02978157195232405
+          },
+         "2":{
+           "omega":0.1266108156571544,
+           "proportion":0.006340428388619544
+          }
+        },
+       "Test":{
+         "0":{
+           "omega":0.008786364056523723,
+           "proportion":0
+          },
+         "1":{
+           "omega":0.02500326175876076,
+           "proportion":1
+          },
+         "2":{
+           "omega":1.001255569266831,
+           "proportion":0
+          }
+        }
+      },
+     "display order":2,
+     "estimated parameters":65
+    }
+  },
+ "input":{
+   "file name":"/home/aglucaci/BUSTED_ModelTest-Viruses/data/Chare2003/Dobrava_virus_N.nex",
+   "number of sequences":23,
+   "number of sites":179,
+   "partition count":1,
+   "trees":{
+     "0":"(((((AJ269554,(AF060023,AF060018)Node6)Node4,((L41916,(AJ251997,AJ251996)Node12)Node10,((AF442623,AF442622)Node16,(((AJ131673,AJ131672)Node21,(AJ269550,AJ269549)Node24)Node20,(AJ009773,AJ009775)Node27)Node19)Node15)Node9)Node3,AF060024)Node2,(AF060021,AF060019,AF060017)Node31)Node1,AF060014,(AF060015,AF060016)Node37,(AF060022,AF060020)Node40)"
+    }
+  },
+ "runtime":"2.5.47",
+ "substitutions":{
+   "0":{
+     "0":{
+       "root":"CAA"
+      },
+     "1":{
+       "Node9":"ACT",
+       "root":"ACC"
+      },
+     "10":{
+       "Node15":"TAT",
+       "root":"TAC"
+      },
+     "100":{
+       "Node15":"TTG",
+       "root":"TTA"
+      },
+     "101":{
+       "Node15":"GTC",
+       "Node24":"GTT",
+       "Node27":"ATC",
+       "root":"ATC"
+      },
+     "102":{
+       "Node24":"AGC",
+       "Node27":"AGC",
+       "root":"AGT"
+      },
+     "103":{
+       "Node27":"CCC",
+       "root":"CCT"
+      },
+     "104":{
+       "AF060024":"GTA",
+       "Node16":"GTA",
+       "Node19":"GTC",
+       "root":"GTG"
+      },
+     "105":{
+       "root":"ATG"
+      },
+     "106":{
+       "root":"AGT"
+      },
+     "107":{
+       "root":"GTG"
+      },
+     "108":{
+       "Node24":"ATC",
+       "root":"ATT"
+      },
+     "109":{
+       "Node19":"GGT",
+       "Node21":"GGC",
+       "root":"GGG"
+      },
+     "11":{
+       "AJ009773":"TTG",
+       "AJ269554":"TTG",
+       "Node16":"CTT",
+       "Node21":"TTG",
+       "Node24":"CTA",
+       "root":"CTG"
+      },
+     "110":{
+       "Node24":"TTC",
+       "Node27":"TTC",
+       "root":"TTT"
+      },
+     "111":{
+       "Node10":"GTA",
+       "Node16":"GTA",
+       "Node24":"ATG",
+       "root":"TTA"
+      },
+     "112":{
+       "AF060021":"GCT",
+       "Node16":"TCC",
+       "Node27":"ACC",
+       "root":"GCC"
+      },
+     "113":{
+       "Node16":"CTC",
+       "root":"CTT"
+      },
+     "114":{
+       "Node16":"GCT",
+       "root":"GCA"
+      },
+     "115":{
+       "AJ269554":"AAA",
+       "L41916":"AAA",
+       "Node16":"AAA",
+       "root":"AAG"
+      },
+     "116":{
+       "AF060021":"AAT",
+       "AJ269554":"AAT",
+       "Node27":"AAT",
+       "root":"AAC"
+      },
+     "117":{
+       "root":"TGG"
+      },
+     "118":{
+       "Node27":"ACG",
+       "root":"ACA"
+      },
+     "119":{
+       "Node10":"GAA",
+       "Node19":"GAA",
+       "root":"GAG"
+      },
+     "12":{
+       "root":"ACA"
+      },
+     "120":{
+       "Node20":"AGA",
+       "root":"CGG"
+      },
+     "121":{
+       "root":"GTT"
+      },
+     "122":{
+       "AJ269554":"GAG",
+       "Node16":"GAG",
+       "Node27":"GAG",
+       "root":"GAA"
+      },
+     "123":{
+       "Node19":"GAG",
+       "root":"GAA"
+      },
+     "124":{
+       "root":"TGG"
+      },
+     "125":{
+       "Node24":"TTA",
+       "root":"CTT"
+      },
+     "126":{
+       "Node16":"GAT",
+       "Node24":"GAT",
+       "root":"GAC"
+      },
+     "127":{
+       "Node20":"CTT",
+       "root":"CTC"
+      },
+     "128":{
+       "Node15":"CCA",
+       "Node27":"CCT",
+       "root":"CCG"
+      },
+     "129":{
+       "Node24":"TGT",
+       "root":"TGC"
+      },
+     "13":{
+       "Node19":"TCT",
+       "root":"TCA"
+      },
+     "130":{
+       "root":"AAG"
+      },
+     "131":{
+       "Node24":"CTG",
+       "root":"CTA"
+      },
+     "132":{
+       "AF060024":"TTA",
+       "Node27":"TTA",
+       "root":"CTA"
+      },
+     "133":{
+       "root":"TCT"
+      },
+     "134":{
+       "AF060024":"GAA",
+       "Node24":"GAA",
+       "Node27":"GAA",
+       "root":"GAG"
+      },
+     "135":{
+       "root":"CCA"
+      },
+     "136":{
+       "root":"TCT"
+      },
+     "137":{
+       "Node16":"CCC",
+       "root":"CCA"
+      },
+     "138":{
+       "Node19":"ACA",
+       "root":"ACG"
+      },
+     "139":{
+       "Node24":"TCC",
+       "root":"TCT"
+      },
+     "14":{
+       "AF060018":"TTT",
+       "AJ251996":"TTT",
+       "Node16":"TTT",
+       "Node20":"TTT",
+       "root":"TTC"
+      },
+     "140":{
+       "Node21":"CTG",
+       "Node27":"TTA",
+       "root":"TTG"
+      },
+     "141":{
+       "Node16":"ACT",
+       "root":"ACC"
+      },
+     "142":{
+       "AJ009775":"AAG",
+       "root":"AAA"
+      },
+     "143":{
+       "Node27":"GGG",
+       "root":"GGC"
+      },
+     "144":{
+       "Node21":"CCG",
+       "Node27":"CCT",
+       "root":"CCA"
+      },
+     "145":{
+       "root":"TCC"
+      },
+     "146":{
+       "Node16":"ACT",
+       "Node27":"ACT",
+       "root":"ACC"
+      },
+     "147":{
+       "Node19":"AAC",
+       "root":"AAT"
+      },
+     "148":{
+       "Node24":"CGG",
+       "root":"CGT"
+      },
+     "149":{
+       "AJ251997":"GAT",
+       "Node19":"GAT",
+       "root":"GAC"
+      },
+     "15":{
+       "Node27":"GTA",
+       "Node3":"GTG",
+       "root":"GTA"
+      },
+     "150":{
+       "Node27":"TAT",
+       "root":"TAC"
+      },
+     "151":{
+       "AF060015":"TCG",
+       "Node24":"TTA",
+       "Node27":"CTG",
+       "root":"TTG"
+      },
+     "152":{
+       "Node20":"AAC",
+       "Node27":"AGT",
+       "root":"AAT"
+      },
+     "153":{
+       "root":"CAA"
+      },
+     "154":{
+       "Node20":"CGA",
+       "Node24":"CGG",
+       "root":"AGA"
+      },
+     "155":{
+       "AJ009775":"CAG",
+       "Node16":"CAG",
+       "root":"CAA"
+      },
+     "156":{
+       "Node16":"GGG",
+       "Node21":"GCA",
+       "Node24":"GGT",
+       "root":"GGA"
+      },
+     "157":{
+       "Node19":"GCA",
+       "root":"GCG"
+      },
+     "158":{
+       "root":"CTT"
+      },
+     "159":{
+       "AJ269554":"GCG",
+       "Node27":"GCG",
+       "root":"GCA"
+      },
+     "16":{
+       "Node10":"GTC",
+       "Node24":"GTC",
+       "Node27":"GTC",
+       "root":"GTT"
+      },
+     "160":{
+       "Node27":"AAG",
+       "Node37":"AAG",
+       "root":"AAA"
+      },
+     "161":{
+       "root":"ATG"
+      },
+     "162":{
+       "Node20":"GAG",
+       "root":"GAA"
+      },
+     "163":{
+       "AF060014":"ACG",
+       "Node10":"ACG",
+       "root":"ACA"
+      },
+     "164":{
+       "AF060014":"AAA",
+       "Node24":"AAA",
+       "Node27":"AAA",
+       "Node6":"AAA",
+       "root":"AAG"
+      },
+     "165":{
+       "root":"GAA"
+      },
+     "166":{
+       "Node24":"GCA",
+       "Node27":"GCC",
+       "Node3":"GCT",
+       "root":"GCC"
+      },
+     "167":{
+       "root":"CAG"
+      },
+     "168":{
+       "AJ009773":"GTT",
+       "root":"GCT"
+      },
+     "169":{
+       "AF060015":"GTA",
+       "AJ009773":"GTT",
+       "AJ269554":"GTA",
+       "root":"GTG"
+      },
+     "17":{
+       "Node2":"CCA",
+       "Node21":"CCG",
+       "root":"CCG"
+      },
+     "170":{
+       "Node19":"AGA",
+       "Node24":"AGG",
+       "root":"AGG"
+      },
+     "171":{
+       "AF060023":"AAG",
+       "Node16":"AAG",
+       "Node24":"AAG",
+       "root":"AAA"
+      },
+     "172":{
+       "root":"CAT"
+      },
+     "173":{
+       "AF060024":"GCT",
+       "root":"GCC"
+      },
+     "174":{
+       "root":"ATA"
+      },
+     "175":{
+       "Node16":"AAT",
+       "root":"GAT"
+      },
+     "176":{
+       "root":"GCT"
+      },
+     "177":{
+       "AF060024":"GGG",
+       "Node4":"GGC",
+       "root":"GGT"
+      },
+     "178":{
+       "AJ269554":"TGT",
+       "Node15":"TGT",
+       "root":"TGC"
+      },
+     "18":{
+       "root":"ATA"
+      },
+     "19":{
+       "Node15":"CTT",
+       "Node19":"CTC",
+       "Node40":"TTG",
+       "root":"CTG"
+      },
+     "2":{
+       "Node15":"GCT",
+       "root":"GCA"
+      },
+     "20":{
+       "AF060018":"CTG",
+       "Node16":"CTG",
+       "Node20":"TTA",
+       "Node27":"CTG",
+       "root":"TTG"
+      },
+     "21":{
+       "Node24":"AAA",
+       "root":"AAG"
+      },
+     "22":{
+       "root":"GCT"
+      },
+     "23":{
+       "root":"CTT"
+      },
+     "24":{
+       "root":"TAC"
+      },
+     "25":{
+       "root":"ATG"
+      },
+     "26":{
+       "Node15":"CTG",
+       "Node16":"CTA",
+       "Node19":"TTG",
+       "Node3":"CTT",
+       "Node40":"TTA",
+       "root":"CTA"
+      },
+     "27":{
+       "Node1":"ACC",
+       "Node15":"ACA",
+       "root":"ACT"
+      },
+     "28":{
+       "Node24":"ACT",
+       "Node27":"ACT",
+       "root":"ACC"
+      },
+     "29":{
+       "root":"AGA"
+      },
+     "3":{
+       "Node20":"GAT",
+       "root":"GAC"
+      },
+     "30":{
+       "Node21":"GGA",
+       "root":"GGG"
+      },
+     "31":{
+       "Node19":"AGG",
+       "Node24":"AGA",
+       "root":"AGA"
+      },
+     "32":{
+       "AJ009775":"CAG",
+       "Node24":"CAG",
+       "root":"CAA"
+      },
+     "33":{
+       "root":"ACT"
+      },
+     "34":{
+       "root":"ACT"
+      },
+     "35":{
+       "Node20":"AAG",
+       "root":"AAA"
+      },
+     "36":{
+       "root":"GAC"
+      },
+     "37":{
+       "AF060024":"AAC",
+       "Node24":"AAC",
+       "root":"AAT"
+      },
+     "38":{
+       "Node16":"AAA",
+       "root":"AAG"
+      },
+     "39":{
+       "Node16":"GGG",
+       "root":"GGA"
+      },
+     "4":{
+       "root":"TGG"
+      },
+     "40":{
+       "root":"ATG"
+      },
+     "41":{
+       "AF060016":"AGA",
+       "AF060020":"AGA",
+       "Node6":"AGA",
+       "root":"AGG"
+      },
+     "42":{
+       "AF060019":"ATC",
+       "root":"ATT"
+      },
+     "43":{
+       "AF060015":"CGT",
+       "Node2":"CGA",
+       "Node20":"CGC",
+       "Node24":"CGT",
+       "root":"CGG"
+      },
+     "44":{
+       "AF060016":"TTT",
+       "Node3":"TTT",
+       "root":"TTC"
+      },
+     "45":{
+       "root":"AAG"
+      },
+     "46":{
+       "root":"GAT"
+      },
+     "47":{
+       "AJ009775":"GAT",
+       "Node24":"GAT",
+       "root":"GAC"
+      },
+     "48":{
+       "Node16":"AGT",
+       "Node27":"AGT",
+       "root":"AGC"
+      },
+     "49":{
+       "AF060024":"TCC",
+       "Node20":"TCA",
+       "Node24":"TCG",
+       "root":"TCT"
+      },
+     "5":{
+       "Node10":"CTA",
+       "Node16":"TTG",
+       "Node27":"CTA",
+       "Node31":"TTG",
+       "root":"CTG"
+      },
+     "50":{
+       "Node21":"TTC",
+       "root":"TTT"
+      },
+     "51":{
+       "AF060023":"GAG",
+       "Node15":"GAG",
+       "Node24":"GAA",
+       "root":"GAA"
+      },
+     "52":{
+       "root":"GAT"
+      },
+     "53":{
+       "Node21":"GTA",
+       "root":"GTG"
+      },
+     "54":{
+       "Node16":"AAC",
+       "root":"AAT"
+      },
+     "55":{
+       "Node19":"GGA",
+       "Node24":"GGG",
+       "root":"GGG"
+      },
+     "56":{
+       "Node21":"ATC",
+       "root":"ATT"
+      },
+     "57":{
+       "Node21":"CGG",
+       "Node3":"CGA",
+       "Node6":"AGA",
+       "root":"CGG"
+      },
+     "58":{
+       "Node27":"AAA",
+       "root":"AAG"
+      },
+     "59":{
+       "root":"CCA"
+      },
+     "6":{
+       "root":"AGC"
+      },
+     "60":{
+       "Node19":"AAA",
+       "Node3":"AAG",
+       "root":"AAA"
+      },
+     "61":{
+       "Node24":"CAT",
+       "Node27":"CAT",
+       "root":"CAC"
+      },
+     "62":{
+       "Node24":"CTA",
+       "root":"CTG"
+      },
+     "63":{
+       "AJ251996":"TTT",
+       "Node16":"TTT",
+       "root":"TTC"
+      },
+     "64":{
+       "Node16":"CTG",
+       "root":"TTG"
+      },
+     "65":{
+       "AJ009773":"TCG",
+       "root":"TCA"
+      },
+     "66":{
+       "root":"ATG"
+      },
+     "67":{
+       "Node20":"CCT",
+       "root":"CCC"
+      },
+     "68":{
+       "Node3":"AAT",
+       "root":"AAC"
+      },
+     "69":{
+       "Node19":"GCT",
+       "Node27":"GCC",
+       "root":"GCA"
+      },
+     "7":{
+       "root":"ATT"
+      },
+     "70":{
+       "AJ009773":"CAG",
+       "Node24":"CAG",
+       "root":"CAA"
+      },
+     "71":{
+       "Node15":"TCC",
+       "root":"TCT"
+      },
+     "72":{
+       "AJ009775":"AGT",
+       "AJ269554":"AGT",
+       "Node10":"AGT",
+       "Node16":"AGT",
+       "Node24":"AGT",
+       "root":"AGC"
+      },
+     "73":{
+       "root":"ATG"
+      },
+     "74":{
+       "AF060018":"AAA",
+       "Node15":"AAA",
+       "root":"AAG"
+      },
+     "75":{
+       "root":"GCA"
+      },
+     "76":{
+       "root":"GAT"
+      },
+     "77":{
+       "Node24":"GAA",
+       "root":"GAG"
+      },
+     "78":{
+       "AF060020":"ATT",
+       "Node16":"ATC",
+       "Node3":"ATT",
+       "root":"ATC"
+      },
+     "79":{
+       "root":"ACA"
+      },
+     "8":{
+       "root":"GTG"
+      },
+     "80":{
+       "AF060018":"CCT",
+       "AJ269554":"CCG",
+       "Node19":"CCT",
+       "root":"CCA"
+      },
+     "81":{
+       "AJ009773":"GGT",
+       "Node19":"GGC",
+       "root":"GGT"
+      },
+     "82":{
+       "Node15":"CGA",
+       "Node27":"AGG",
+       "root":"CGG"
+      },
+     "83":{
+       "Node40":"TTT",
+       "root":"TTC"
+      },
+     "84":{
+       "Node24":"AGA",
+       "Node27":"AGA",
+       "root":"AGG"
+      },
+     "85":{
+       "root":"ACT"
+      },
+     "86":{
+       "root":"GCA"
+      },
+     "87":{
+       "Node10":"ATC",
+       "Node16":"GTT",
+       "Node27":"GTC",
+       "root":"ATT"
+      },
+     "88":{
+       "root":"TGT"
+      },
+     "89":{
+       "root":"GGA"
+      },
+     "9":{
+       "AJ269554":"GTA",
+       "Node10":"ATC",
+       "Node27":"ATC",
+       "root":"GTC"
+      },
+     "90":{
+       "Node19":"TTA",
+       "Node40":"TTA",
+       "root":"CTA"
+      },
+     "91":{
+       "Node16":"TAT",
+       "Node24":"TAT",
+       "root":"TAC"
+      },
+     "92":{
+       "root":"CCA"
+      },
+     "93":{
+       "Node16":"GCT",
+       "Node20":"GCT",
+       "root":"GCC"
+      },
+     "94":{
+       "root":"CAG"
+      },
+     "95":{
+       "AJ269554":"GTC",
+       "Node21":"GTC",
+       "root":"GTT"
+      },
+     "96":{
+       "AJ269554":"AAA",
+       "Node15":"AAA",
+       "root":"AAG"
+      },
+     "97":{
+       "root":"GCA"
+      },
+     "98":{
+       "Node21":"AGA",
+       "root":"AGG"
+      },
+     "99":{
+       "L41916":"AAT",
+       "Node15":"AAT",
+       "Node3":"AAC",
+       "root":"AAT"
+      }
+    }
+  },
+ "test results":{
+   "LRT":0,
+   "p-value":0.5
+  },
+ "tested":{
+   "0":{
+     "AF060014":"background",
+     "AF060015":"background",
+     "AF060016":"background",
+     "AF060017":"background",
+     "AF060018":"background",
+     "AF060019":"background",
+     "AF060020":"background",
+     "AF060021":"background",
+     "AF060022":"background",
+     "AF060023":"background",
+     "AF060024":"background",
+     "AF442622":"background",
+     "AF442623":"background",
+     "AJ009773":"background",
+     "AJ009775":"background",
+     "AJ131672":"background",
+     "AJ131673":"background",
+     "AJ251996":"background",
+     "AJ251997":"background",
+     "AJ269549":"background",
+     "AJ269550":"background",
+     "AJ269554":"background",
+     "L41916":"background",
+     "Node1":"test",
+     "Node10":"test",
+     "Node12":"test",
+     "Node15":"test",
+     "Node16":"test",
+     "Node19":"test",
+     "Node2":"test",
+     "Node20":"test",
+     "Node21":"test",
+     "Node24":"test",
+     "Node27":"test",
+     "Node3":"test",
+     "Node31":"test",
+     "Node37":"test",
+     "Node4":"test",
+     "Node40":"test",
+     "Node6":"test",
+     "Node9":"test"
+    }
+  },
+ "timers":{
+   "Overall":{
+     "order":0,
+     "timer":29
+    },
+   "Preliminary model fitting":{
+     "order":1,
+     "timer":3
+    },
+   "Unconstrained BUSTED model fitting":{
+     "order":2,
+     "timer":25
+    }
+  }
+}
